@@ -51,7 +51,7 @@ if(CMAKE_CUDA_COMPILER)
   
   set_target_properties(test_dispatch_kernel PROPERTIES
     CUDA_SEPARABLE_COMPILATION ON
-    CUDA_STANDARD 17
+    CUDA_STANDARD 20
   )
   
   target_include_directories(test_dispatch_kernel PRIVATE
@@ -83,7 +83,7 @@ if(CMAKE_CUDA_COMPILER)
   add_executable(test_host_dispatcher test_host_dispatcher.cu)
   set_target_properties(test_host_dispatcher PROPERTIES
     CUDA_SEPARABLE_COMPILATION ON
-    CUDA_STANDARD 17
+    CUDA_STANDARD 20
   )
   target_include_directories(test_host_dispatcher PRIVATE
     ${CUDAToolkit_INCLUDE_DIRS}
